@@ -79,55 +79,48 @@ h2 { font-size: 3rem; margin-bottom: 60px; text-transform: uppercase; letter-spa
     .glitch-text { font-size: 3rem; }
     .project-grid { grid-template-columns: 1fr; }
 }
-/* CONTACT ROW STYLING */
-.contact-row {
-    margin: 25px 0;
+/* --- TECHNICAL ARSENAL SECTION STYLING --- */
+#skills {
+    padding: 100px 0;
+    position: relative;
+    background: #000; /* Dark background */
+}
+
+#skills h2 {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+/* 1. Skill Grid Layout (Horizontal/Flexible) */
+.skill-grid {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows skills to flow on smaller screens */
+    gap: 15px; /* Space between each item */
+    justify-content: center; /* Centered layout */
+    margin-top: 30px;
 }
 
-.contact-item {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.9rem;
-    font-weight: 300;
-    transition: var(--transition);
-    opacity: 0.8;
+/* 2. Style the "Blueprint-Badge" (Inactive state) */
+.skill-item {
+    background: rgba(0, 255, 255, 0.05); /* Very slight Cyan tint */
+    border: 1px solid #00ffff; /* Solid Cyan border */
+    color: #00ffff; /* Cyan text matching your theme */
+    padding: 12px 25px; /* Good size for text and badging */
+    border-radius: 50px; /* Perfectly round edges */
+    font-size: 0.95rem;
+    font-family: 'Space Grotesk', sans-serif; /* Your theme font */
+    font-weight: 500;
+    cursor: default; /* Not a link, so no hand pointer */
+    box-sizing: border-box; /* Standard layout rule */
+    text-transform: uppercase; /* Match your headings */
+    letter-spacing: 1.5px; /* Blueprint feel */
 }
 
-.contact-item span {
-    color: var(--accent);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    margin-right: 8px;
-}
-
-.contact-item:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-    color: var(--accent);
-}
-
-.divider {
-    color: var(--border);
-    font-weight: 100;
-}
-
-/* Adjusting Hero for the extra content */
-.hero-content {
-    max-width: 900px;
-    padding-top: 50px;
-}
-
-@media (max-width: 768px) {
-    .contact-row {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .divider { display: none; }
+/* 3. The Interactive Glow (Hover state) */
+.skill-item:hover {
+    background: #00ffff; /* Solid Cyan on hover */
+    color: #000; /* Switch text to black on bright background */
+    box-shadow: 0 0 20px #00ffff; /* The major glowing effect */
+    transform: translateY(-5px); /* Gentle lift effect */
 }
